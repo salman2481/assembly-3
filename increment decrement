@@ -1,0 +1,16 @@
+INCLUDE Irvine32.inc
+.data
+a dword 1111h
+.code
+main PROC
+Mov Eax,a  
+Call DumpRegs
+Inc Eax
+Call DumpRegs
+Dec Eax
+Call DumpRegs 
+ 
+ Call ReadInt  
+ Exit
+ main ENDP
+ END main 
